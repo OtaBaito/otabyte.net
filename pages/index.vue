@@ -1,5 +1,5 @@
 <template>
-	<Maintenance />
+	<LandingPage />
 </template>
 
 <script>
