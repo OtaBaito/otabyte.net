@@ -4,10 +4,12 @@
 			<div class="absolute">
 				<OtaLogo class="w-20" />
 			</div>
-			<div class="col-span-7">
-				<img class="h-screen mx-auto object-cover" src="~/assets/megumin_doodle.jpg"
-					alt="Megumin act as Lily" />
-				<div class="mx-auto px-4 pt-4 pb-16 sm:pt-6 sm:pb-24 sm:px-6 lg:px-8">
+			<div class="z-0 col-span-7">
+				<div class="z-0 fixed h-screen w-screen">
+					<img class="h-full mx-auto object-cover" src="~/assets/lily_sketch.jpeg" alt="Lily Sketch" />
+				</div>
+				<div class="h-screen w-screen -mx-20"></div>
+				<div class="z-10 bg-white relative mx-auto px-4 pt-4 pb-16 sm:pt-6 sm:pb-24 sm:px-6 lg:px-8">
 					<div class="text-center">
 						<p
 							class="font-['Montserrat'] text-3xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl">
@@ -18,9 +20,9 @@
 				</div>
 			</div>
 
-			<img style="transform: scale(-1, 1)" class="mt-12 col-span-3" src="~/assets/megumin_doodle.jpg"
-				alt="Megumin act as Lily" />
-			<div class="col-span-4 flex flex-col justify-center pl-8">
+			<img style="transform: scale(-1, 1)" class="z-20 relative mt-12 col-span-3" src="~/assets/lily_sketch.jpeg"
+				alt="Lily Sketch" />
+			<div class="z-20 bg-white col-span-4 flex flex-col justify-center pl-8">
 				<div class="font-bold text-4xl mb-2">
 					NON RESPECTIVE TITLE
 				</div>
@@ -36,10 +38,10 @@
 					class="mt-4 bg-gray-800 hover:bg-gray-700 rounded-md text-white font-bold py-2 px-4 w-32 text-center">
 					JOIN US</div>
 			</div>
-			<div class="col-span-7 mt-20 font-bold text-4xl text-center">
+			<div class="col-span-7 mt-20 font-bold text-4xl text-center bg-white">
 				Our Project
 			</div>
-			<div class="flex col-span-7 gap-4 justify-center">
+			<div class="flex col-span-7 gap-4 justify-center bg-white">
 				<div v-for="project in projects" :key="project.id" class="rounded-2xl h-96 w-72 relative shadow-md">
 					<div class="w-full h-2/3 bg-cover bg-center rounded-t-2xl"
 						:style="'background-image: url(' + project.image + ')'">
@@ -53,7 +55,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-span-7 flex justify-center py-10">
+			<div class="col-span-7 flex justify-center py-10 bg-white z-20">
 				Copyright &copy; 2019 -
 				{{ new Date().getFullYear() }} OtaByte All
 				Rights Reserved.
