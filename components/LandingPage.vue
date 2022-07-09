@@ -2,7 +2,9 @@
 	<div class="w-screen relative">
 		<div class="grid gap-4 grid-cols-7 max-w-full px-8">
 			<div class="z-10 absolute">
-				<OtaLogo class="w-20" />
+				<NuxtLink to="/">
+					<OtaLogo class="w-20" />
+				</NuxtLink>
 			</div>
 			<div class="z-0 col-span-7">
 				<div class="h-screen w-full">
@@ -52,11 +54,12 @@
 					praesentium commodi ipsam maiores
 					possimus quaerat dolores optio ratione.
 				</div>
-				<div
+				<a
+					href="https://discord.gg/PatqggV3EN"
 					class="mt-4 bg-gray-800 hover:bg-gray-700 rounded-md text-white font-bold py-2 px-4 w-32 text-center"
 				>
 					JOIN US
-				</div>
+				</a>
 			</div>
 			<div
 				class="col-span-7 mt-20 font-bold text-4xl text-center bg-white"
