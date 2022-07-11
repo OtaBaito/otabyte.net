@@ -36,12 +36,12 @@
 
 			<img
 				style="transform: scale(-1, 1)"
-				class="mt-12 col-span-3"
+				class="lg:sticky top-0 mt-12 col-span-7 md:col-span-3"
 				src="~/assets/lily_sketch.jpeg"
 				alt="Lily Sketch"
 			/>
 			<div
-				class="bg-white col-span-4 flex flex-col justify-center pl-8"
+				class="bg-white col-span-4 flex flex-col justify-end pl-8"
 			>
 				<div class="font-bold text-4xl mb-2">
 					NON RESPECTIVE TITLE
@@ -61,6 +61,15 @@
 					JOIN US
 				</a>
 			</div>
+			<div class="hidden md:block col-span-3"></div>
+			<div class="col-span-7 md:col-span-4 mt-48">
+				<img
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.weirdasianews.com%2Fwp-content%2Fuploads%2F2009%2F08%2FJapanese-Cosplay-21.jpg&f=1&nofb=1"
+				/>
+				<img
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-7onApj4vdSw%2FWyi4AwoShFI%2FAAAAAAAANUM%2Ft33941_Zd-IDVroOYSdLfixfQsjjeorzgCLcBGAs%2Fs1600%2FFB_IMG_15293938125547624.jpg&f=1&nofb=1"
+				/>
+			</div>
 			<div
 				class="col-span-7 mt-20 font-bold text-4xl text-center bg-white"
 			>
@@ -69,10 +78,11 @@
 			<div
 				class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 col-span-7 gap-4 content-center bg-white"
 			>
-				<div
+				<a
 					v-for="project in projects"
 					:key="project.id"
-					class="rounded-2xl h-96 w-full relative shadow-md"
+					:href="project.url"
+					class="rounded-2xl h-96 w-full relative shadow-md hover:shadow-xl transition"
 				>
 					<div
 						class="w-full h-2/3 bg-cover bg-center rounded-t-2xl"
@@ -82,6 +92,7 @@
 							')'
 						"
 					></div>
+
 					<div
 						class="px-4 absolute bottom-0 h-2/5 flex flex-col justify-center bg-white rounded-2xl"
 					>
@@ -97,17 +108,10 @@
 						<span>{{
 							project.description
 						}}</span>
-						<a
-							:href="project.url"
-							class="text-blue-600 hover:text-blue-500"
-							>Learn more</a
-						>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div
-				class="col-span-7 flex justify-center py-10 bg-white z-20"
-			>
+			<div class="col-span-7 flex justify-center py-10">
 				Copyright &copy; 2019 -
 				{{ new Date().getFullYear() }} OtaByte All
 				Rights Reserved.
