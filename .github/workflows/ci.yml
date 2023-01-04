@@ -48,7 +48,7 @@ jobs:
                         - name: Building static
                           run: npm run generate
                         - name: Deploy to Server
-                          uses: easingthemes/ssh-deploy@v2.2.11
+                          uses: easingthemes/ssh-deploy@v4.0.4
                           env:
                                   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
                                   ARGS: '-rltgoDzvO --delete'
